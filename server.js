@@ -54,5 +54,4 @@ function consultar(falhar = false) {
   });
 }
 
-
 app.listen(PORT, () => console.log(`Servidor em http://localhost:${PORT}`));
