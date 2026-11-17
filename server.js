@@ -40,4 +40,18 @@ app.get('/mensagens/:id', (req, res) => {
     res.json(mensagem);
 })
 
+function consultar(falhar = false) {
+
+
+    return new Promise((resolve, reject) => {
+   
+        setTimeout(() => {
+      falhar
+      ? reject(new Error('Falhou'))
+      : resolve(mensagens);
+   
+    }, 1000);
+  });
+}
+
 app.listen(PORT, () => console.log(`Servidor em http://localhost:${PORT}`));
